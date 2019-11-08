@@ -6,13 +6,23 @@ let app = {
       
     app.randomBackground();
     app.loadQuote();
-    //app.loadPhoto();  
+    //app.loadPhoto(); 
+
+    $('button').on('click', app.addOneLike);
   },
 
   randomBackground: function() {
-    $("#bg").backstretch(["bg.jpg", "bg1.jpg", "bg2.jpg", "bg3.jpg", "bg4.jpg"],
+    let base = 'img/';
+    $("#bg").backstretch([`${base}bg.jpg`, `${base}bg1.jpg`, `${base}bg2.jpg`, `${base}bg3.jpg`, `${base}bg4.jpg`],
     {duration: 5000, fade:1500});
   }, 
+  randomNumber: function(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    number = Math.floor(Math.random() * (max - min +1)) + min;  
+    return number  
+  },
+
 
   loadPhoto: function() {
 
@@ -46,9 +56,9 @@ let app = {
       );
 
   }, 
-
   loadQuote: function() {
     $quotesList = []
+    $quoteNumb = []
 
     $.ajax(
       {
@@ -60,14 +70,16 @@ let app = {
       function(response) 
       {
         res = response;
-        console.log(res);
+        //console.log(res);
         $.each(res, function(i, quote) 
         {
-          $quotesList.push(quote.text)
+          $quotesList.push(quote)
+          //$quoteNumb.push(i)
         })
 
-        app.randomQuote(0)
-
+        app.randomNumber(0, 1)
+        console.log(number)
+        app.generateQuote(number);
       }
     ).fail(
         function() 
@@ -76,11 +88,38 @@ let app = {
         }
     );
 
-    }, 
+    
 
-    randomQuote: function($id) {
-      $('#quote').append($quotesList[$id]);
-    }
+  },
+  
+
+  generateQuote: function(numb) {
+
+    $('#quote').attr('data-id', $quotesList[numb]['id'])
+    $('#quote #text').append($quotesList[numb]['text'])
+    $('#quote #number').append($quotesList[numb]['likes'])
+    $('#quote #author').append($quotesList[numb]['author'])
+  },
+
+  
+  addOneLike: function(evt) {
+    
+    console.log(evt.target)
+
+    // permet de récuperer le nombre de likes du bouton sur lequel on clique
+    $numberToChange = $(evt.target).find('#number').text()
+    
+    // On transforme la string en number pour l'incrémenter d'un point
+    $newNumber = parseInt($numberToChange)
+    $newNumber++
+  
+    $(evt.target).find('#number').text($newNumber)
+
+    $('#likes').find('button').addClass('disabled');
+
+    console.log($newNumber)
+
+  }
 
 
 };

@@ -3,7 +3,7 @@ html {
 }
 
 .bg {
-  background: linear-gradient( rgba(255, 255, 255, .3), rgba(255, 255, 255, 0.5) ), url(bg.jpg) no-repeat center center fixed;
+  background: linear-gradient( rgba(255, 255, 255, .3), rgba(255, 255, 255, 0.5) ), url(img/bg.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -37,13 +37,30 @@ html {
 
 .quote-box {
   font-family: 'Montserrat', sans-serif;
-  background-color: white;
-  height: 200px;
-  width: 500px;
+  background-color: rgba(255, 255, 255, 0.9);
+  height: 300px;
+  width: 700px;
   margin: auto;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   border-radius: 10px;
   padding: 15px;
   font-size: 17px;
   
+}
+
+.d-flex {
+  display: flex;
+} 
+
+#text-box {
+  display: flex;
+  align-items: center;
+}
+#author-like-box {
+  display: flex;
+  align-items: center;
+}
+
+.ui.disabled.button {
+  opacity: 1 !important;
 }

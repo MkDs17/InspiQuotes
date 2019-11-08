@@ -2,11 +2,13 @@
     {
       "id": 1,
       "text": "Tu es la personne la plus importante de ta vie",
-      "author": "Unknown"
+      "author": "Unknown",
+      "likes": 42
     },
     {
       "id": 2,
       "text": "Tu ne peux pas changer ton passé, seulement ton regard sur lui",
-      "author": "Unknown"
+      "author": "Unknown",
+      "likes": 24
     }
 ]
