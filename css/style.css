@@ -20,8 +20,9 @@ html {
   transition: all 1s ease;  
 
   display: flex;
-  align-content: center;
+  align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 
 .backstretch:after {
@@ -63,4 +64,13 @@ html {
 
 .ui.disabled.button {
   opacity: 1 !important;
+}
+
+.round {
+  border-radius: 30px !important;
+}
+
+.infos {
+  position: relative;
+  margin-bottom: 35px !important;
 }

@@ -13,32 +13,62 @@
 
     
     <div id="bg" class="bg">
-            <div id="quote" data-id="" class="quote-box d-flex">
-                <div class="ui vertically divided grid">
-                    <div id="text-box" class="one column row d-flex-center center aligned">
-                        <div class="column">
-                            <blockquote id="text"></blockquote>
-                        </div>
-                      
+        <div id="quote" data-id="" class="quote-box d-flex">
+            <div class="ui vertically divided grid">
+                <div id="text-box" class="one column row d-flex-center center aligned">
+                    <div class="column">
+                        <blockquote id="text"></blockquote>
                     </div>
-                    <div id="author-like-box" class="two column row">
-                        <div class="column center aligned">
-                            <a id="author" class="ui label">
-                                <img class="ui right spaced avatar image" src="img/avataaars.svg">                                
-                            </a>
-                        </div>
-                        <div class="column center aligned">
-                            <div id="likes" class="ui compact menu">
-                                <button class="item ui button">
-                                    <i class="icon heart"></i> Likes
-                                    <div id="number" class="floating ui red label"></div>
-                                </button>
-                            </div>
-                        </div>
-                      
+                    
+                </div>
+                <div id="author-like-box" class="two column row">
+                    <div class="column center aligned">
+                        <a id="author" class="ui label">
+                            <img class="ui right spaced avatar image" src="img/avataaars.svg">                                
+                        </a>
                     </div>
-                </div>  
+                    <div class="column center aligned">
+                        <div id="likes" class="ui compact menu">
+                            <button id="btnLike" class="item ui button">
+                                <i class="icon heart"></i> Likes
+                                <div id="number" class="floating ui red label"></div>
+                            </button>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>  
+        </div>
+
+        <button id="btnInfos" class="ui button icon round primary infos">
+            <i class="info circle icon"></i>
+        </button>
+
+        <div class="ui modal">
+            <i class="close icon"></i>
+            <div class="header">
+                Profile Picture
             </div>
+            <div class="image content">
+                <div class="ui medium image">
+                <img src="img/avataaars.svg">
+                </div>
+                <div class="description">
+                <div class="ui header">We've auto-chosen a profile image for you.</div>
+                <p>We've grabbed the following image from the <a href="https://www.gravatar.com" target="_blank">gravatar</a> image associated with your registered e-mail address.</p>
+                <p>Is it okay to use this photo?</p>
+                </div>
+            </div>
+            <div class="actions">
+                <div class="ui black deny button">
+                Nope
+                </div>
+                <div class="ui positive right labeled icon button">
+                Yep, that's me
+                <i class="checkmark icon"></i>
+                </div>
+            </div>
+        </div>
     </div>
 
     

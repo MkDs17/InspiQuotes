@@ -2,13 +2,14 @@
 let app = {
   // Par convention on crée une méthode init
   init: function() {
-    console.log('init');
+    console.log('init')
       
-    app.randomBackground();
-    app.loadQuote();
+    app.randomBackground()
+    app.loadQuote()
     //app.loadPhoto(); 
 
-    $('button').on('click', app.addOneLike);
+    $('#btnLike').on('click', app.addOneLike)
+    $('#btnInfos').on('click', app.showModalInfo)
   },
 
   randomBackground: function() {
@@ -119,6 +120,10 @@ let app = {
 
     console.log($newNumber)
 
+  },
+
+  showModalInfo: function(evt) {
+    $('.ui.modal').modal('show')
   }
 
 
