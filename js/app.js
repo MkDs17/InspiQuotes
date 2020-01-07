@@ -86,12 +86,9 @@ let app = {
         {
             alert('Ajax loading failed');
         }
-    );
+    );   
 
-    
-
-  },
-  
+  },  
 
   generateQuote: function(numb) {
 
@@ -100,7 +97,6 @@ let app = {
     $('#quote #number').append($quotesList[numb]['likes'])
     $('#quote #author').append($quotesList[numb]['author'])
   },
-
   
   addOneLike: function(evt) {
     

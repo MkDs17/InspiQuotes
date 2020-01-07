@@ -2,8 +2,27 @@ html {
   height: 100vh;
 }
 
+blockquote:before,
+blockquote:after {
+	position: absolute;
+	color: #cac9c1;
+	font-size: 15rem;
+	width: 4rem;
+	height: 4rem;
+}
+blockquote:before {
+  content: open-quote;
+	left: 2rem;
+  top: 6rem;
+}
+blockquote:after {
+	content: '”';
+	right: 4rem;
+	bottom: 3rem;
+}
+
 .bg {
-  background: linear-gradient( rgba(255, 255, 255, .3), rgba(255, 255, 255, 0.5) ), url(img/bg.jpg) no-repeat center center fixed;
+  background: linear-gradient( rgba(255, 255, 255, .3), rgba(255, 255, 255, 0.5)), url(img/bg.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -37,7 +56,7 @@ html {
 
 .quote-box {
   font-family: 'Montserrat', sans-serif;
-  background-color: rgba(255, 255, 255, 0.9);
+  background: linear-gradient( rgb(255, 255, 255), rgba(255, 255, 255, .7));
   height: 300px;
   width: 700px;
   margin: auto;
@@ -45,20 +64,30 @@ html {
   border-radius: 10px;
   padding: 15px;
   font-size: 17px;
-  
-}
-
-.d-flex {
   display: flex;
-} 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
 
 #text-box {
   display: flex;
   align-items: center;
+  height: 70%;
 }
 #author-like-box {
   display: flex;
   align-items: center;
+  justify-content: space-around;
+  height: 30%;
+  width: 100%;
+  
+}
+#author-like-box #author {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 500;
 }
 
 .ui.disabled.button {
