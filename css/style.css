@@ -12,13 +12,13 @@ blockquote:after {
 }
 blockquote:before {
   content: open-quote;
-	left: 2rem;
-  top: 6rem;
+	left: 3rem;
+  top: 7rem;
 }
 blockquote:after {
 	content: '”';
-	right: 4rem;
-	bottom: 3rem;
+	right: 5rem;
+	bottom: 4rem;
 }
 
 .bg {
@@ -85,6 +85,8 @@ blockquote:after {
   
 }
 #author-like-box #author {
+  display: flex;
+  align-items: center;
   font-family: 'Open Sans';
   font-style: italic;
   font-weight: 500;
