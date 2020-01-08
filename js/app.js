@@ -4,8 +4,8 @@ let app = {
 
   // Par convention on crée une méthode init
   init: function() {
-    console.log('init');
-      
+    console.log('init')
+    
     app.randomBackground();
     app.loadQuote();
     
@@ -18,6 +18,7 @@ let app = {
   // Recharge une citation
   reLoadQuote: function() {
     app.generateQuote();
+
   },
 
   randomBackground: function() {
@@ -91,6 +92,10 @@ let app = {
     $(evt.target).find('#number').text($newNumber)
     $('#likes').find('button').addClass('disabled')
 
+  },
+
+  showModalInfo: function(evt) {
+    $('.ui.modal').modal('show')
   }
 
 };
