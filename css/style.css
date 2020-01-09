@@ -13,12 +13,12 @@ blockquote:after {
 blockquote:before {
   content: open-quote;
 	left: 3rem;
-  top: 7rem;
+  top: 6rem;
 }
 blockquote:after {
 	content: '”';
 	right: 5rem;
-	bottom: 4rem;
+	bottom: 3rem;
 }
 
 .bg {
@@ -59,7 +59,7 @@ blockquote:after {
   font-family: 'Montserrat', sans-serif;
   background: linear-gradient( rgb(255, 255, 255), rgba(255, 255, 255, .7));
   height: 300px;
-  width: 700px;
+  width: 650px;
   margin: auto;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   border-radius: 10px;
@@ -70,6 +70,11 @@ blockquote:after {
   flex-direction: column;
   align-items: center;
   position: relative;
+}
+@media screen and (max-width: 640px) {
+  .quote-box {
+    width: 400px;
+  }
 }
 
 #text-box {
