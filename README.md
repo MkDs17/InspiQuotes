@@ -1,10 +1,12 @@
 # InspiQuotes
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/13ac3895-5d89-49ab-b9f2-5d917f3c03af/deploy-status)](https://app.netlify.com/sites/inspiquotes/deploys)
+
 ![alt Gif du projet InspiQuotes](img/inspiQuotes.gif)
 
 ---
 
-[Click Here to view more](http://15.188.76.189/side/InspiQuotes)
+[Click Here to view more](https://inspiquotes.netlify.app)
 
 ---
 
